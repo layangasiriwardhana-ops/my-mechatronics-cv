@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sithum Layanga Siriwardhana - Mechatronics Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for aesthetic buttons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for printing */
+        @media print {
+            /* Hide the print button when printing */
+            .print-button-container {
+                display: none;
+            }
+            /* Ensure the document takes up the full print page */
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                font-size: 10pt; /* Smaller font for better fit on paper */
+            }
+            .cv-container {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+                padding: 20px !important;
+                width: 100% !important;
+                min-height: 100vh; /* Ensure content flows across pages */
+            }
+            h2 {
+                color: #2563EB !important; /* Force color printing */
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            /* Adjust layout for printing */
+            .main-grid {
+                grid-template-columns: 1fr 2.5fr !important;
+            }
+        }
+        
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Set a clean font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Print Button Container - Fixed Position -->
+    <div class="print-button-container fixed top-5 right-5 z-50">
+        <button id="printBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-lg flex items-center transition duration-300 transform hover:scale-105" onclick="window.print()">
+            <i data-lucide="printer" class="w-5 h-5 mr-2"></i>
+            Print CV (to PDF)
+        </button>
+    </div>
+
+    <!-- Main CV/Portfolio Container -->
+    <div class="cv-container max-w-5xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden mt-12 mb-12 p-8 md:p-10 lg:p-12">
+        <header class="pb-6 border-b border-gray-200 mb-6">
+            <h1 class="text-4xl font-extrabold text-gray-900">Sithum Layanga Siriwardhana</h1>
+            <p class="text-xl text-blue-600 font-medium mt-1">Mechatronics Technology Enthusiast</p>
+        </header>
+
+        <!-- Two-column grid for CV content (Left: Sidebar, Right: Main Content) -->
+        <div class="main-grid grid grid-cols-1 md:grid-cols-[1fr_2.5fr] gap-8">
+            
+            <!-- Left Sidebar: Contact, Profile Summary, Skills, Languages -->
+            <aside class="space-y-8">
+                
+                <!-- Profile Image Placeholder -->
+                <div class="p-0 border-b border-gray-100 pb-4">
+                    <!-- The image is a placeholder as the original image URL is not available outside the PDF -->
+                    <img src="https://placehold.co/200x250/1e40af/ffffff?text=Professional+Photo" 
+                         alt="Sithum Layanga Siriwardhana - Professional Photo Placeholder" 
+                         class="w-full h-auto object-cover rounded-lg shadow-md max-w-[200px] mx-auto md:mx-0">
+                </div>
+
+                <!-- Personal Details -->
+                <section>
+                    <h2 class="text-lg font-bold uppercase tracking-wider text-blue-600 border-b-2 border-blue-600 pb-1 mb-3">Contact Details</h2>
+                    <ul class="text-gray-700 text-sm space-y-2">
+                        <li>
+                            <div class="font-semibold">Mobile:</div> 0769293937
+                        </li>
+                        <li>
+                            <div class="font-semibold">Email:</div> layangasiriwardhana@gmail.com
+                        </li>
+                        <li>
+                            <div class="font-semibold">Address:</div> 62/2, Balagalla, Divulapitiya (11250)
+                        </li>
+                        <li>
+                            <div class="font-semibold">Date of Birth:</div> 19/12/2001
+                        </li>
+                        <li>
+                            <div class="font-semibold">NIC:</div> 200135400743
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Skills & Abilities -->
+                <section>
+                    <h2 class="text-lg font-bold uppercase tracking-wider text-blue-600 border-b-2 border-blue-600 pb-1 mb-3">Skills & Abilities</h2>
+                    <ul class="text-gray-700 text-sm space-y-1 list-disc list-inside">
+                        <li>Computer Skills (MS Word, Excel, Access, PowerPoint)</li>
+                        <li>Team working</li>
+                        <li>Work Ethic</li>
+                        <li>Multitask</li>
+                    </ul>
+                </section>
+
+                <!-- Languages -->
+                <section>
+                    <h2 class="text-lg font-bold uppercase tracking-wider text-blue-600 border-b-2 border-blue-600 pb-1 mb-3">Language Proficiency</h2>
+                    <ul class="text-gray-700 text-sm space-y-1">
+                        <li><span class="font-semibold">Sinhala:</span> Native</li>
+                        <li><span class="font-semibold">English:</span> Proficient</li>
+                    </ul>
+                </section>
+
+                <!-- Non-Related Referees -->
+                <section class="break-inside-avoid">
+                    <h2 class="text-lg font-bold uppercase tracking-wider text-blue-600 border-b-2 border-blue-600 pb-1 mb-3">Non-Related Referees</h2>
+                    <div class="text-gray-700 text-sm space-y-3">
+                        <p class="leading-relaxed">Mrs. Ayesha Abeysekara Sirimanna<br>
+                            Attorney-at-law of the Supreme Court, Notary Public & Commissioner for Oaths.<br>
+                            Mobile: 0777-17 12 61<br>
+                            Landline: 031-22 47 542</p>
+                    </div>
+                </section>
+
+            </aside>
+
+            <!-- Right Main Content: Profile, Education, Experience -->
+            <main class="space-y-8">
+                
+                <!-- Profile Summary -->
+                <section>
+                    <h2 class="text-xl font-extrabold uppercase tracking-wider text-blue-700 border-b-4 border-blue-700 pb-2 mb-4">Profile</h2>
+                    <p class="text-gray-800 leading-relaxed text-base">
+                        As a dedicated student pursuing a National Diploma in Mechatronics at the College of Technology, Colombo 10. I bring a competitive spirit, strong analytical skills, and a diligent work ethic to the industry. My passion for mechatronics has driven me to excel academically and to continuously seek opportunities for growth.
+                    </p>
+                </section>
+
+                <!-- Education -->
+                <section>
+                    <h2 class="text-xl font-extrabold uppercase tracking-wider text-blue-700 border-b-4 border-blue-700 pb-2 mb-4">Education</h2>
+                    
+                    <!-- 1. National Diploma in Mechatronics -->
+                    <div class="mb-5 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-900">National Diploma in Mechatronic Technology</h3>
+                            <span class="text-sm font-medium text-gray-500">03/2022 – 02/2024</span>
+                        </div>
+                        <p class="text-base text-gray-700 font-semibold">College of Technology, Maradana, Sri Lanka</p>
+                        <p class="text-sm text-gray-600 mt-2 font-medium">Subjects Covered:</p>
+                        <ul class="text-sm text-gray-700 mt-1 grid grid-cols-2 gap-x-4 list-disc list-inside ml-4">
+                            <li>Applied Electricity</li>
+                            <li>Applied Electronics</li>
+                            <li>Workshop Technology</li>
+                            <li>Engineering Drawing</li>
+                            <li>Hydraulics and Electro Hydraulics systems</li>
+                            <li>Pneumatics and Electro Pneumatics systems</li>
+                            <li>Programmable Logic Controller</li>
+                            <li>Safety & Workshop Environment</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. G.C.E. Advanced Level (2020) -->
+                    <div class="mb-5">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-900">G.C.E. Advanced Level (2020)</h3>
+                            <span class="text-sm font-medium text-gray-500">2020</span>
+                        </div>
+                        <p class="text-base text-gray-700 font-semibold">Sri Gnanodaya Central College</p>
+                        <p class="text-sm text-gray-600 mt-1">Passed with 3S, 1S for General English in Technology stream.</p>
+                    </div>
+
+                    <!-- 3. G.C.E. Ordinary Level (2017) -->
+                    <div class="mb-5">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-900">G.C.E. Ordinary Level (2017)</h3>
+                            <span class="text-sm font-medium text-gray-500">2017</span>
+                        </div>
+                        <p class="text-base text-gray-700 font-semibold">Sri Gnanodaya Central College</p>
+                        <p class="text-sm text-gray-600 mt-1">Passed with 2B, 6C, 1S.</p>
+                    </div>
+                </section>
+
+                <!-- Other Educational Qualifications -->
+                <section>
+                    <h2 class="text-xl font-extrabold uppercase tracking-wider text-blue-700 border-b-4 border-blue-700 pb-2 mb-4">Other Qualifications</h2>
+                    
+                    <div class="mb-3">
+                        <h3 class="text-lg font-bold text-gray-900">Three-month English course</h3>
+                        <p class="text-base text-gray-700 font-semibold">Australian College of Education - 2023</p>
+                    </div>
+
+                    <div class="mb-3">
+                        <h3 class="text-lg font-bold text-gray-900">Three-month Business English course</h3>
+                        <p class="text-base text-gray-700 font-semibold">American Center Colombo - 2025</p>
+                    </div>
+                </section>
+
+                <!-- Work Experience -->
+                <section>
+                    <h2 class="text-xl font-extrabold uppercase tracking-wider text-blue-700 border-b-4 border-blue-700 pb-2 mb-4">Work Experience</h2>
+                    
+                    <!-- 1. Training (Expo Industrial) -->
+                    <div class="mb-5">
+                        <h3 class="text-lg font-bold text-gray-900">Six-month Training</h3>
+                        <p class="text-base text-gray-700 font-semibold">Expo Industrial (pvt) Ltd</p>
+                        <p class="text-sm text-gray-600 mt-1">Practical training relevant to mechatronics technology.</p>
+                    </div>
+                    
+                    <!-- 2. Guest Relations Officer (Health Garden) -->
+                    <div class="mb-5">
+                        <h3 class="text-lg font-bold text-gray-900">Guest Relations Officer</h3>
+                        <p class="text-base text-gray-700 font-semibold">Health Garden (pvt) Ltd.</p>
+                        <p class="text-sm text-gray-600 mt-1">Involved in managing guest relations and ensuring service quality.</p>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+
+    <script>
+        // Lucide icon rendering initialization
+        lucide.createIcons();
+
+        // Simple JavaScript for the Print functionality
+        // window.print() is called directly in the button's onclick attribute, 
+        // which is the simplest and most effective way to trigger the native browser print dialog.
+    </script>
+</body>
+</html>
