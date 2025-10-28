@@ -9,13 +9,19 @@
     <!-- Load Lucide Icons for aesthetic buttons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        /* --- A4 PRINT OPTIMIZATION (NEW) --- */
+        /* Set standard 1.5cm margins for the A4 page itself */
+        @page {
+            margin: 1.5cm;
+        }
+
         /* Custom styles for printing */
         @media print {
             /* Hide the print button when printing */
             .print-button-container {
                 display: none;
             }
-            /* Ensure the document takes up the full print page */
+            /* Ensure the document takes up the full print page content area */
             body {
                 margin: 0;
                 padding: 0;
@@ -25,8 +31,9 @@
             .cv-container {
                 box-shadow: none !important;
                 border-radius: 0 !important;
+                /* Remove screen margins/padding to allow @page margins to take effect */
                 margin: 0 !important;
-                padding: 20px !important;
+                padding: 0 !important; 
                 width: 100% !important;
                 min-height: 100vh; /* Ensure content flows across pages */
             }
@@ -38,6 +45,10 @@
             /* Adjust layout for printing */
             .main-grid {
                 grid-template-columns: 1fr 2.5fr !important;
+            }
+            /* Remove space below footer/end of document */
+            .mb-12 {
+                margin-bottom: 0 !important;
             }
         }
         
@@ -254,4 +265,3 @@
     </script>
 </body>
 </html>
-
